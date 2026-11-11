@@ -1,0 +1,9 @@
+.env
+.env.*
+.projects/vault
+.projects/cache
+.agents
+.claude
+.cursor
+node_modules
+.next

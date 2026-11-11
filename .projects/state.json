@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "providers": {
+    "neon": {
+      "name": "Neon"
+    },
+    "vercel": {
+      "name": "Vercel"
+    }
+  },
+  "resources": {
+    "neon-plan": {
+      "livemode": true,
+      "name": "neon-plan",
+      "providerName": "Neon",
+      "serviceId": "free"
+    },
+    "neon-postgres": {
+      "livemode": true,
+      "name": "neon-postgres",
+      "providerName": "Neon",
+      "serviceId": "postgres"
+    },
+    "vercel-plan": {
+      "livemode": true,
+      "name": "vercel-plan",
+      "providerName": "Vercel",
+      "serviceId": "hobby"
+    },
+    "vercel-project": {
+      "livemode": true,
+      "name": "vercel-project",
+      "providerName": "Vercel",
+      "serviceId": "project"
+    }
+  },
+  "environments": {
+    "default": {
+      "output": ".env",
+      "resources": [
+        {
+          "resourceName": "neon-plan"
+        },
+        {
+          "resourceName": "neon-postgres"
+        },
+        {
+          "resourceName": "vercel-plan"
+        },
+        {
+          "resourceName": "vercel-project"
+        }
+      ],
+      "variables": [
+        {
+          "variableName": "mpp-secret",
+          "envKey": "MPP_SECRET_KEY"
+        }
+      ]
+    }
+  },
+  "variables": {
+    "mpp-secret": {
+      "name": "mpp-secret",
+      "backendId": "fprjvar_61Vk0JdCBFPBnCMJd16VjwZM7VGC2Djm1Co2VX4jwG92"
+    }
+  }
+}
